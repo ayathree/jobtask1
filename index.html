@@ -65,6 +65,19 @@
     text-decoration: none;
     cursor: pointer;
 }
+.closeT {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.closeT:hover,
+.closeT:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
     </style>
 </head>
@@ -387,7 +400,7 @@
                         </div>
                         
                     </section>
-                    <!-- modal -->
+                    <!-- modal one -->
                      <section>
                         <div id="myModal" class="modal ">
                             <div class="modal-content  rounded-lg">
@@ -422,7 +435,53 @@
                                       
                                     </div>
                                     <div class="ml-32">
-                                        <p class="text-right mt-10">Already have an account? <span class="text-[#2F6CE5] font-semibold">Sign In</span></p>
+                                        <p class="text-right mt-10">Already have an account? <span id="modalTwo" class="text-[#2F6CE5] font-semibold">Sign In</span></p>
+                                        <img class="mt-20" src="./image/513049 PI8X2J 876.png" alt="">
+                                        <p class="text-right text-[#8A8A8A] text-xs mt-20">By signing up, you agree to our Terms & conditions, Privacy policy</p>
+                                    </div>
+                                   </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                     </section>
+                     <!-- modal two -->
+                     <section>
+                        <div id="myModalT" class="modal ">
+                            <div class="modal-content  rounded-lg">
+                                <span class="closeT ">&times;</span>
+                                <p class="text-[#008A45] p-2 bg-[#EFFFF4]  text-center  ">Let's learn, share & inspire each other with our passion for computer engineering. Sign up now 🤘🏼</p>
+                                <div class="">
+                                    <!-- main grid -->
+                                   <div class="grid lg:grid-cols-2   p-4">
+                                    <div>
+                                        <p class="text-2xl font-semibold my-10">Create Account</p>
+                                       <div class="flex lg:flex-col ">
+                                       <div class="flex lg:flex-row justify-center items-center">
+                                        <input  type="text" placeholder="First Name" class="border-2 border-[#D9D9DB] flex-1 p-2 bg-[#F7F8FA]" >
+                                        <input type="text" placeholder="Last Name" class="border-2 border-[#D9D9DB] flex-1 p-2 bg-[#F7F8FA]" >
+                                       </div>
+                                        <input type="text" placeholder="Email" class="border-2 border-[#D9D9DB] p-2 bg-[#F7F8FA]" >
+                                       <form class="relative border-2 border-[#D9D9DB] p-2 bg-[#F7F8FA]">
+                                        <input type="text" placeholder="Password" class="bg-[#F7F8FA]" >
+                                        <span class="absolute right-7 ">
+                                            <img src="./image/Group 3.png" alt="">
+                                        </span>
+                                       </form>
+                                        <input type="text" placeholder="Confirm Password" class="border-2 border-[#D9D9DB] p-2 bg-[#F7F8FA]" >
+                                        <button class="p-3 mt-5 text-white font-semibold   rounded-full bg-[#2F6CE5]">Create Account</button>
+                                        <button class="flex gap-3 p-3 mt-5 justify-center border-2 border-[#D9D9DB] items-center">
+                                            <img src="./image/f_logo_RGB-Blue_1024.png" alt="">
+                                             Sign up with Facebook</button>
+                                        <button class="flex gap-3 p-3 mt-5 justify-center items-center border-2 border-[#D9D9DB]">
+                                            <img src="./image/search.png" alt="">
+                                            Sign up with Google</button>
+                                       </div>
+                                      
+                                    </div>
+                                    <div class="ml-32">
+                                        <p class="text-right mt-10">Already have an account? <span  class="text-[#2F6CE5] font-semibold">Create</span></p>
                                         <img class="mt-20" src="./image/513049 PI8X2J 876.png" alt="">
                                         <p class="text-right text-[#8A8A8A] text-xs mt-20">By signing up, you agree to our Terms & conditions, Privacy policy</p>
                                     </div>
@@ -441,8 +500,10 @@
     <footer></footer>
     <script>
        // Get references to the button and modal
+    //    modal one
 var joinLeaveButton = document.getElementById("joinLeaveButton");
 var modal = document.getElementById("myModal");
+
 
 // Handle button click to toggle between join and leave
 joinLeaveButton.addEventListener("click", function() {
@@ -457,6 +518,7 @@ joinLeaveButton.addEventListener("click", function() {
 
         // Display the modal
         modal.style.display = "block";
+        
     } else {
         // If already joined, simulate leaving the group
         // Change button text and background back to original state
@@ -486,6 +548,39 @@ window.addEventListener("click", function(event) {
         modal.style.display = "none";
     }
 });
+// modal two
+var modalTwo = document.getElementById("modalTwo");
+var modalT = document.getElementById("myModalT");
+var modal = document.getElementById("myModal");
+
+// Handle button click to toggle between join and leave
+modalTwo.addEventListener("click", function() {
+   
+
+        // Display the modal
+        modalT.style.display = "block";
+    
+
+        // Close the modal (optional: you may handle leaving actions here)
+        modal.style.display = "none";
+    
+});
+
+// Close the modal when the user clicks on the close button (X)
+var closeButtonT = document.getElementsByClassName("closeT")[0];
+if (closeButtonT) {
+    closeButtonT.addEventListener("click", function() {
+        modalT.style.display = "none";
+    });
+}
+
+// Close the modal when the user clicks outside of it
+window.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        modalT.style.display = "none";
+    }
+});
+
 
         function toggleDropdown(element) {
             // Close any other open dropdowns
