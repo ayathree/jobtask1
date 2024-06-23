@@ -79,6 +79,9 @@
     cursor: pointer;
 }
 
+.follow-button { background-color: #EDEEF0; color: black; }
+.following-button { background-color: black; color: #FFF; }
+
     </style>
 </head>
 <body>
@@ -353,7 +356,7 @@
                        
                     </div>
 <!-- after join group -->
-                    <section>
+                    <section id="recommended" class="hidden">
                         <div class="flex gap-1 mt-44">
                             <img src="./image/twotone-thumb_up-24px.png" alt="">
                             <p>RECOMMENDED GROUPS</p>
@@ -365,7 +368,7 @@
                                 <p>Leisure</p>
                             </div>
                             <div>
-                                <button class="bg-[#EDEEF0] p-2 px-4 rounded-full text-xs">Follow</button>
+                                <button class="follow-button p-2 px-4 rounded-full text-xs">Follow</button>
                             </div>
                         </div>
                         <div class="flex lg:flex-row justify-between items-center mt-5">
@@ -374,7 +377,7 @@
                                 <p>Activism</p>
                             </div>
                             <div>
-                                <button class="bg-[#EDEEF0] p-2 px-4 rounded-full text-xs">Follow</button>
+                                <button class="follow-button  p-2 px-4 rounded-full text-xs">Follow</button>
                             </div>
                         </div>
                         <div class="flex lg:flex-row justify-between items-center mt-5">
@@ -383,7 +386,7 @@
                                 <p>MBA</p>
                             </div>
                             <div>
-                                <button class="bg-[#EDEEF0] p-2 px-4 rounded-full text-xs">Follow</button>
+                                <button class="follow-button  p-2 px-4 rounded-full text-xs">Follow</button>
                             </div>
                         </div>
                         <div class="flex lg:flex-row justify-between items-center mt-5">
@@ -392,7 +395,7 @@
                                 <p>Philosophy</p>
                             </div>
                             <div>
-                                <button class="bg-[#EDEEF0] p-2 px-4 rounded-full text-xs">Follow</button>
+                                <button class="follow-button  p-2 px-4 rounded-full text-xs">Follow</button>
                             </div>
                         </div>
                         <div>
@@ -501,6 +504,7 @@
     //    modal one
 var joinLeaveButton = document.getElementById("joinLeaveButton");
 var modal = document.getElementById("myModal");
+var recommended = document.getElementById("recommended");
 
 
 // Handle button click to toggle between join and leave
@@ -516,6 +520,8 @@ joinLeaveButton.addEventListener("click", function() {
 
         // Display the modal
         modal.style.display = "block";
+        recommended.classList.remove("hidden");
+        recommended.classList.add("block");
         
     } else {
         // If already joined, simulate leaving the group
@@ -578,6 +584,24 @@ window.addEventListener("click", function(event) {
         modalT.style.display = "none";
     }
 });
+// follow button
+var followButtons = document.querySelectorAll(".follow-button");
+        followButtons.forEach(function(button) {
+            button.addEventListener("click", function() {
+                if (button.classList.contains("follow-button")) {
+                    button.classList.remove("follow-button");
+                    button.classList.add("following-button");
+                    button.textContent = "Followed";
+                } else {
+                    button.classList.remove("following-button");
+                    button.classList.add("follow-button");
+                    button.textContent = "Follow";
+                }
+            });
+        });
+
+
+
 
 
         function toggleDropdown(element) {
