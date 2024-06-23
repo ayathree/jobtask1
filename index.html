@@ -339,12 +339,13 @@
                 <!-- right side -->
                 <div>
                     <div class="flex lg:flex-row justify-between gap-28 items-center mt-10" >
-                        <div class="flex  items-center gap-3">
+                        <div class="flex  items-center gap-3 location-container">
                             <img src="./image/outline-location_on-24px.png" alt="">
-                           <p>Noida, India</p>
+                           <p id="locationText">Noida, India</p>
+                           <input type="text" id="locationInput" class="hidden outline-none" >
                         </div>
                         <div>
-                            <i class="fa-solid fa-pen"></i>
+                            <button id="editButton"><i class="fa-solid fa-pen"></i></button>    
                         </div>
                     </div>
                     <hr class="mt-2">
@@ -421,7 +422,7 @@
                                        </div>
                                         <input type="text" placeholder="Email" class="border-2 border-[#D9D9DB] p-2 bg-[#F7F8FA]" >
                                        <form class="relative border-2 border-[#D9D9DB] p-2 bg-[#F7F8FA]">
-                                        <input type="text" placeholder="Password" class="bg-[#F7F8FA]" >
+                                        <input type="text" placeholder="Password" class="bg-[#F7F8FA] outline-none" >
                                         <span class="absolute right-7 ">
                                             <img src="./image/Group 3.png" alt="">
                                         </span>
@@ -464,7 +465,7 @@
                                        
                                         <input type="text" placeholder="Email" class="border-2 border-[#D9D9DB] p-2 bg-[#F7F8FA]" >
                                        <form class="relative border-2 border-[#D9D9DB] p-2 bg-[#F7F8FA]">
-                                        <input type="text" placeholder="Password" class="bg-[#F7F8FA]" >
+                                        <input type="text" placeholder="Password" class="bg-[#F7F8FA] outline-none" >
                                         <span class="absolute right-7 ">
                                             <img src="./image/Group 3.png" alt="">
                                         </span>
@@ -599,7 +600,21 @@ var followButtons = document.querySelectorAll(".follow-button");
                 }
             });
         });
-
+// input field
+document.getElementById('editButton').addEventListener('click', function() {
+            var locationText = document.getElementById('locationText');
+            var locationInput = document.getElementById('locationInput');
+            if (locationText.classList.contains('hidden')) {
+                // locationText.textContent = locationInput.value;
+                locationText.classList.remove('hidden');
+                locationInput.classList.add('hidden');
+            } else {
+                // locationInput.value = locationText.textContent;
+                locationText.classList.add('hidden');
+                locationInput.classList.remove('hidden');
+                locationInput.focus();
+            }
+        });
 
 
 
