@@ -124,7 +124,14 @@
    
     </header>
     <main>
-        <section class="container mx-auto lg:px-24 py-8 mt-10" >
+        <section class="container mx-auto lg:px-24 py-8 lg:mt-10" >
+            <div class="block lg:hidden flex flex-row justify-between items-center p-4">
+                <a class="text-black font-semibold" href="">Posts(368)</a>
+                <button class="bg-[#F1F3F5] p-2">Filter: All<i class="fa-solid fa-caret-down ml-3"></i></button>
+
+
+
+            </div>
            <div class="hidden lg:block lg:flex lg-flex-row justify-between items-center">
             <div class="flex lg:flex-row justify-start gap-4 items-center text-[#8A8A8A]">
                 <a class="text-black font-semibold" href="">All Posts(32)</a>
@@ -141,20 +148,20 @@
                 
                </div>
            </div>
-           <hr class="mt-2">
+           <hr class="mt-2 hidden lg:block">
         </section>
         <section class="container mx-auto lg:px-24  ">
-            <div class="hidden lg:block lg:flex lg:flex-row justify-between ">
+            <div class=" lg:flex lg:flex-row justify-between ">
                 <!-- left side -->
-               <div class="flex lg:flex-col gap-5">
+               <div class="flex flex-col gap-5">
                 <div class="border-2 border-[#E0E0E0] rounded-lg ">
                     <img src="./image/Rectangle 5.png" alt="">
                     <!-- for border -->
                     <div class="p-4">
                         <img class="mt-2" src="./image/✍️ Article.png" alt="">
                     <div class="flex lg:flex-row justify-between items-center mt-2 ellipsis-container">
-                        <p class="text-xl font-bold">What if famous brands had regular fonts? Meet
-                            <br>
+                        <p class="lg:text-xl font-bold">What if famous brands had regular fonts? Meet
+                            <br class="hidden lg:block">
                              RegulaBrands!</p>
                              <i class="fa-solid fa-ellipsis cursor-pointer" onclick="toggleDropdown(this)"></i>
                              <!-- Dropdown menu -->
@@ -165,7 +172,7 @@
                                  <a href="#">Option 3</a>
                              </div>
                     </div>
-                    <p class="text-[#5C5C5C] mt-2">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                    <p class="text-[#5C5C5C] text-xs lg:text-lg mt-2">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
 
                     <div class="flex lg:flex-row justify-between items-center mt-6">
                         <div class="flex lg:flex-row justify-between gap-2 items-center ">
@@ -175,16 +182,19 @@
                             </div>
                             <div>
                                 <p>Sarthak Kamra</p>
+                                <p class="block lg:hidden">1.4k views</p>
                             </div>
                         </div>
                         <div class="flex lg:flex-row justify-between gap-6 items-center">
                             <!-- right -->
-                            <div class="flex lg:flex-row justify-between  items-center  gap-2">
+                            <div class="lg:flex hidden lg:block lg:flex-row justify-between  items-center  gap-2">
                                 <i class="fa-regular fa-eye"></i>
                                 <p>1.4k views</p>
                             </div>
                             <div>
-                                <i class="fa-solid fa-share-nodes p-2 bg-[#EDEEF0]"></i>
+                                <i class="fa-solid fa-share-nodes p-2 bg-[#EDEEF0]" ></i>
+                               
+                                
                             </div>
                         </div>
                     </div>
@@ -197,8 +207,8 @@
                     <div class="p-4">
                         <img class="mt-2" src="./image/🔬️ Education.png" alt="">
                     <div class="flex lg:flex-row justify-between items-center mt-2 ellipsis-container">
-                        <p class="text-xl font-bold">Tax Benefits for Investment under National Pension 
-                            <br>
+                        <p class="lg:text-xl font-bold">Tax Benefits for Investment under National Pension 
+                            <br class="hidden lg:block">
                             Scheme launched by Government</p>
                         <i class="fa-solid fa-ellipsis cursor-pointer" onclick="toggleDropdown(this)"></i>
                         <!-- Dropdown menu -->
@@ -209,7 +219,7 @@
                             <a href="#">Option 3</a>
                         </div>
                     </div>
-                    <p class="text-[#5C5C5C] mt-2">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
+                    <p class="text-[#5C5C5C] mt-2 text-xs lg:text-lg">I’ve worked in UX for the better part of a decade. From now on, I plan to rei…</p>
 
                     <div class="flex lg:flex-row justify-between items-center mt-6">
                         <div class="flex lg:flex-row justify-between gap-2 items-center ">
@@ -219,11 +229,12 @@
                             </div>
                             <div>
                                 <p>Sarah West</p>
+                                <p class="block lg:hidden">1.4k views</p>
                             </div>
                         </div>
                         <div class="flex lg:flex-row justify-between gap-6 items-center">
                             <!-- right -->
-                            <div class="flex lg:flex-row justify-between  items-center  gap-2">
+                            <div class="lg:flex lg:flex-row justify-between  items-center hidden lg:block  gap-2">
                                 <i class="fa-regular fa-eye"></i>
                                 <p>1.4k views</p>
                             </div>
@@ -241,7 +252,7 @@
                     <div class="p-4">
                         <img class="mt-2" src="./image/🗓️ Meetup.png" alt="">
                     <div class="flex lg:flex-row justify-between items-center mt-2 ellipsis-container">
-                        <p class="text-xl font-bold">Finance & Investment Elite Social Mixer @Lujiazui</p>
+                        <p class="lg:text-xl  font-bold">Finance & Investment Elite Social Mixer @Lujiazui</p>
                         <i class="fa-solid fa-ellipsis cursor-pointer" onclick="toggleDropdown(this)"></i>
                         <!-- Dropdown menu -->
                         <div class="dropdown-content">
@@ -251,14 +262,14 @@
                             <a href="#">Option 3</a>
                         </div>
                     </div>
-                   <div class="grid lg:grid-cols-3 gap-10 mt-3">
+                   <div class="lg:grid lg:grid-cols-3 flex flex-row gap-10 mt-3">
                     <div class="flex lg:flex-row gap-3 items-center">
                         <i class="fa-regular fa-calendar"></i>
-                        <p>Fri, 12 Oct, 2018</p>
+                        <p class="text-xs lg:text-base  ">Fri, 12 Oct, 2018</p>
                     </div>
                     <div class="flex lg:flex-row gap-3 items-center">
                         <img src="./image/outline-location_on-24px.png" alt="">
-                        <p>Ahmedabad, India</p>
+                        <p class="text-xs lg:text-base ">Ahmedabad, India</p>
                     </div>
                    </div>
 
@@ -275,11 +286,12 @@
                             </div>
                             <div>
                                 <p>Ronal Jones</p>
+                                <p class="block lg:hidden">1.4k views</p>
                             </div>
                         </div>
                         <div class="flex lg:flex-row justify-between gap-6 items-center">
                             <!-- right -->
-                            <div class="flex lg:flex-row justify-between  items-center  gap-2">
+                            <div class="lg:flex lg:flex-row justify-between hidden lg:block  items-center  gap-2">
                                 <i class="fa-regular fa-eye"></i>
                                 <p>1.4k views</p>
                             </div>
@@ -297,7 +309,8 @@
                     <div class="p-4">
                         <img class="mt-2" src="./image/💼️ Job.png" alt="">
                     <div class="flex lg:flex-row justify-between items-center mt-2 ellipsis-container">
-                        <p class="text-xl font-bold">Software Developer</p>
+                        <p class="text-xl hidden lg:block font-bold">Software Developer</p>
+                        <p class="lg:text-xl lg:hidden block font-bold">Software Developer-II</p>
                         <i class="fa-solid fa-ellipsis cursor-pointer" onclick="toggleDropdown(this)"></i>
                         <!-- Dropdown menu -->
                         <div class="dropdown-content">
@@ -307,14 +320,15 @@
                             <a href="#">Option 3</a>
                         </div>
                     </div>
-                   <div class="grid lg:grid-cols-2 gap-10 mt-3">
+                   <div class="lg:grid lg:grid-cols-2 flex flex-row  gap-10 mt-3">
                     <div class="flex lg:flex-row gap-3 items-center">
                         <img src="./image/outline-work_outline-24px.png" alt="">
-                        <p>Innovaccer Analytics Private Ltd.</p>
+                        <p class="hidden lg:block">Innovaccer Analytics Private Ltd.</p>
+                        <p class="text-xs lg:hidden block">Innovaccer Analy...</p>
                     </div>
                     <div class="flex lg:flex-row gap-3 items-center">
                         <img src="./image/outline-location_on-24px.png" alt="">
-                        <p>Noida, India</p>
+                        <p class="text-xs lg:text-base">Noida, India</p>
                     </div>
                    </div>
 
@@ -331,11 +345,12 @@
                             </div>
                             <div>
                                 <p>Joseph Gray</p>
+                                <p class="block lg:hidden">1.4k views</p>
                             </div>
                         </div>
                         <div class="flex lg:flex-row justify-between gap-6 items-center">
                             <!-- right -->
-                            <div class="flex lg:flex-row justify-between  items-center  gap-2">
+                            <div class="lg:flex lg:flex-row justify-between hidden lg:block  items-center  gap-2">
                                 <i class="fa-regular fa-eye"></i>
                                 <p>1.4k views</p>
                             </div>
@@ -352,7 +367,7 @@
                </div>
                 <!-- right side -->
                 <div>
-                    <div class="flex lg:flex-row justify-between gap-28 items-center mt-10" >
+                    <div class="hidden lg:block lg:flex lg:flex-row justify-between gap-28 items-center mt-10" >
                         <div class="flex  items-center gap-3 location-container">
                             <img src="./image/outline-location_on-24px.png" alt="">
                            <p id="locationText">Noida, India</p>
