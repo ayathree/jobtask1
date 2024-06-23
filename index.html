@@ -95,7 +95,11 @@
                 </span>
                 <input class="bg-slate-100 w-[260px] border-2 border-black rounded-full text-xs p-2 pl-8" type="text" placeholder="Search for your favorite groups in ATG">
             </form>
-            <h1 class="font-bold">Create account. <span class="text-[#2F6CE5] ">It's free!</span><i class="fa-solid fa-caret-down p-2"></i></h1>
+            <h1 id="nonAvatar" class="font-bold">Create account. <span class="text-[#2F6CE5] ">It's free!</span><i class="fa-solid fa-caret-down p-2"></i></h1>
+            <div id="avatar" class="flex gap-3 items-center hidden">
+                <img src="./image//avater fourth.png" alt="">
+                <p>Siddharth Goyal</p>
+            </div>
         </nav>
        </section>
        <section class="relative">
@@ -506,6 +510,8 @@
 var joinLeaveButton = document.getElementById("joinLeaveButton");
 var modal = document.getElementById("myModal");
 var recommended = document.getElementById("recommended");
+var nonAvatar = document.getElementById("nonAvatar");
+var avatar = document.getElementById("avatar");
 
 
 // Handle button click to toggle between join and leave
@@ -523,6 +529,9 @@ joinLeaveButton.addEventListener("click", function() {
         modal.style.display = "block";
         recommended.classList.remove("hidden");
         recommended.classList.add("block");
+        nonAvatar.classList.add('hidden');
+        avatar.classList.remove('hidden');
+        avatar.classList.add('block');
         
     } else {
         // If already joined, simulate leaving the group
