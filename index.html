@@ -138,9 +138,11 @@
        <section class="relative">
         <!-- Image for mobile screens -->
         <img class="w-full h-auto object-cover lg:hidden" src="./image/mobile cover.png" alt="Mobile Cover">
-        <div class="block lg:hidden absolute top-1 p-4 flex flex-row justify-between items-center w-full">
+        <div  class="block lg:hidden absolute top-1 p-4 flex flex-row justify-between items-center w-full">
             <i class="fa-solid fa-arrow-left text-white"></i>
-            <button id="" class="secondJoin text-white border-2 border-white p-2 text-xs rounded-lg">Join Group</button>
+            <button id="secondJoin"  class=" text-white border-2 border-white p-2 text-xs rounded-lg">Join Group</button>
+           
+            
         </div>
 
         <!-- Image for large screens -->
@@ -690,32 +692,6 @@ document.getElementById('editButton').addEventListener('click', function() {
             }
         });
 
-//    mobile modal
-var secondJoin = document.getElementsByClassName("secondJoin");
-        var modalD = document.getElementById("myModalD");
-        var closeButtonD = document.getElementsByClassName("closeD")[0];
-
-        secondJoin.addEventListener("click", function() {
-            if (secondJoin.innerText === "Join Group") {
-                secondJoin.innerText = "Leave Group";
-                modalD.style.display = "block"; // Show the modal
-            } else {
-                secondJoin.innerText = "Join Group";
-                modalD.style.display = "none"; // Hide the modal
-            }
-        });
-
-        closeButtonD.addEventListener("click", function() {
-            modalD.style.display = "none";
-        });
-
-        window.addEventListener("click", function(event) {
-            if (event.target === modalD) {
-                modalD.style.display = "none";
-            }
-        });
-
-
         function toggleDropdown(element) {
             // Close any other open dropdowns
             document.querySelectorAll('.dropdown-content').forEach(dropdown => {
@@ -737,12 +713,7 @@ var secondJoin = document.getElementsByClassName("secondJoin");
             }
         }
 
-
-
-         
-
-
-
     </script>
+   
 </body>
 </html>
